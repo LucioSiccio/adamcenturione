@@ -1,0 +1,65 @@
+/* Layout Container */
+.page-layout {
+  display: flex;
+  margin-top: 64px; /* Matches the height of your floating top nav */
+  min-height: 100vh;
+}
+
+/* THE SIDE PANEL */
+.side-panel {
+  width: 260px;
+  background-color: #2a2a2a; /* Slightly lighter than top nav */
+  color: white;
+  padding: 40px 20px;
+  
+  /* UX Fix: This makes it stick while you scroll the main content */
+  position: sticky;
+  top: 64px; 
+  height: calc(100vh - 64px); 
+  border-right: 3px solid #2e7d32; /* Green accent to match your theme */
+}
+
+.side-panel h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Side Panel Links */
+.side-links {
+  list-style: none;
+}
+
+.side-links li {
+  margin-bottom: 10px;
+}
+
+.side-links a {
+  display: block;
+  padding: 10px;
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+/* Side Panel Hover (Azure) and Active (Red) */
+.side-links a:hover {
+  background-color: azure;
+  color: #222;
+}
+
+.side-links a:active {
+  background-color: red !important;
+  color: white !important;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1; /* Takes up all remaining width */
+  padding: 40px;
+  background-color: #fff;
+}
